@@ -4,6 +4,10 @@ from common.Selector import BiasedRandomSelector
 import platformdirs
 import os
 
+
+# TODO: Finish review button callback to display training records
+# TODO: Polish Code
+
 data_dir = platformdirs.user_data_dir(appname="hiragana_training", appauthor="thomaskkfung")
 os.makedirs(data_dir, exist_ok=True)
 
