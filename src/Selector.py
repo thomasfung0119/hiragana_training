@@ -1,4 +1,4 @@
-import random
+from random import choices
 
 class BiasedRandomSelector:
     selected_char = None
@@ -13,7 +13,7 @@ class BiasedRandomSelector:
         normalized_probabilities = [p / total_probability for p in probabilities]
 
         # Choose an item based on the calculated probabilities
-        self.selected_item = random.choices(self.items, weights=normalized_probabilities, k=1)[0]
+        self.selected_item = choices(self.items, weights=normalized_probabilities, k=1)[0]
         self.selection_counts[self.selected_item] += 1
         
         return self.selected_item
